@@ -1,5 +1,8 @@
 package com.api.customerloananalyzer.domain;
 
+import com.api.customerloananalyzer.domain.Customer;
+import com.api.customerloananalyzer.domain.Loan;
+import com.api.customerloananalyzer.domain.LoanNotAvailableException;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

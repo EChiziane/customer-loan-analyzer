@@ -1,4 +1,6 @@
-package com.api.customerloananalyzer.domain;
+package com.api.customerloananalyzer.factory;
+
+import com.api.customerloananalyzer.domain.Customer;
 
 public class CustomerFactory {
 
