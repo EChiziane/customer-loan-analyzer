@@ -20,7 +20,7 @@ public class LoanService {
             loans.add(new LoanResponse(LoanType.PERSONAL, loan.getPersonalLoanInterestRate()));
         }
 
-        if (loan.isConsigmentLoanAvailable()) {
+        if (loan.isConsignmentLoanAvailable()) {
             loans.add(new LoanResponse(LoanType.CONSIGNMENT, loan.getConsigmentLoanInterestRate()));
         }
 

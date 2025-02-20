@@ -1,7 +1,7 @@
 package com.api.customerloananalyzer.domain;
 
 public class Loan {
-    private Customer customer;
+    private final Customer customer;
     public Loan(Customer customer) {
         this.customer = customer;
     }
@@ -10,7 +10,7 @@ public class Loan {
         return basicLoanAvailable();
     }
 
-    public boolean isConsigmentLoanAvailable() {
+    public boolean isConsignmentLoanAvailable() {
         return customer.isIncomeEqualOrGreaterThan(5000.0);
     }
 
@@ -33,7 +33,7 @@ public class Loan {
     }
 
     public double getConsigmentLoanInterestRate() {
-        if (isConsigmentLoanAvailable()){
+        if (isConsignmentLoanAvailable()){
             return 2.0;
         }
         throw new LoanNotAvailableException();

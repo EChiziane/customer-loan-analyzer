@@ -1,8 +1,5 @@
 package com.api.customerloananalyzer.domain;
 
-import com.api.customerloananalyzer.domain.Customer;
-import com.api.customerloananalyzer.domain.Loan;
-import com.api.customerloananalyzer.domain.LoanNotAvailableException;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -76,7 +73,7 @@ class LoanTest {
 
             doReturn(true).when(customer).isIncomeEqualOrGreaterThan(5000.0);
 
-            assertTrue(loan.isConsigmentLoanAvailable());
+            assertTrue(loan.isConsignmentLoanAvailable());
         }
 
         @Test
@@ -84,7 +81,7 @@ class LoanTest {
 
             doReturn(false).when(customer).isIncomeEqualOrGreaterThan(5000.0);
 
-            assertFalse(loan.isConsigmentLoanAvailable());
+            assertFalse(loan.isConsignmentLoanAvailable());
         }
     }
 
